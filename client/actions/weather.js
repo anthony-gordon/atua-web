@@ -16,12 +16,6 @@ export const receiveWeather = (weather) => {
   }
 }
 
-export const showError = (errorMessage) => {
-  return {
-    type: SHOW_ERROR,
-    errorMessage
-  }
-}
 
 // api calls
 export function getWeather() {

@@ -21,4 +21,3 @@ export function indexReducer (state=0, action) {
       return state
   }
 }
-

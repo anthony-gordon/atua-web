@@ -11,6 +11,8 @@ export function getTextByURL (url) {
   }
 }
 
+
+//action
 export function clearText () {
   return {
     type: 'CLEAR_TEXT',
@@ -18,7 +20,7 @@ export function clearText () {
   }
 }
 
-//action
+
 export function receiveText (text) {
   return {
       type: 'RECEIVE_TEXT',

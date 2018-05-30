@@ -1,6 +1,6 @@
 
 
-export function navigate (destination) {
+export function navigate(destination) {
   return {
       type: 'ENTER_SITE',
       destination

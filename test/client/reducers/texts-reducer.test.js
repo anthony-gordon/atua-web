@@ -1,6 +1,6 @@
-import textsReducer from '../../client/reducers/texts'
+import textsReducer from '../../../client/reducers/texts'
 
-test('Reducer Initial State', () => {
+test('texts Reducer Initial State', () => {
   const expected = []
 
   const actual = textsReducer(undefined, {})
