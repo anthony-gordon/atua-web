@@ -1,4 +1,3 @@
-
 export const thanks = [
   "Mitch & Ali from Maggle Creative",
   "Oscar Keys from the NZVRARA Society",
@@ -16,5 +15,5 @@ export const thanks = [
   "Mount Victoria",
   "Black Dog Brewery",
   "Feijoas, Mandarins, and Berocca for all the cold-delaying vitamins",
-  "Legend of Tāwhirimātea (c) Wiremu Grace, sourced from Ministry of Education"  
-]
+  "Legend of Tāwhirimātea (c) Wiremu Grace, sourced from Ministry of Education"
+];

@@ -1,41 +1,36 @@
-import request from 'superagent'
+import request from "superagent";
 
-
-export function getTextByURL (url) {
+export function getTextByURL(url) {
   return dispatch => {
-    request
-      .get('/api/v1/texts'+'/'+url)
-      .then(res => {
-	dispatch(receiveText(res.body))
-      })
-  }
+    request.get("/api/v1/texts" + "/" + url).then(res => {
+      dispatch(receiveText(res.body));
+    });
+  };
 }
-
 
 //action
-export function clearText () {
+export function clearText() {
   return {
-    type: 'CLEAR_TEXT',
+    type: "CLEAR_TEXT",
     text: {}
-  }
+  };
 }
 
-
-export function receiveText (text) {
+export function receiveText(text) {
   return {
-      type: 'RECEIVE_TEXT',
-      text
-  }
+    type: "RECEIVE_TEXT",
+    text
+  };
 }
 
 export function increaseIndex() {
   return {
-    type: 'INCREASE_INDEX'
-  }
+    type: "INCREASE_INDEX"
+  };
 }
 
 export function decreaseIndex() {
   return {
-    type: 'DECREASE_INDEX'
-  }
+    type: "DECREASE_INDEX"
+  };
 }

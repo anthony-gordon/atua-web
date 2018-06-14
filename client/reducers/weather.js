@@ -1,13 +1,13 @@
-import {RECEIVE_WEATHER} from '../actions/weather'
+import { RECEIVE_WEATHER } from "../actions/weather";
 
-function weatherReducer (state = [], action) {
-    switch (action.type) {
-      case RECEIVE_WEATHER:
-      return action.weather
+function weatherReducer(state = [], action) {
+  switch (action.type) {
+    case RECEIVE_WEATHER:
+      return action.weather;
 
-      default:
-      return state
-    }
+    default:
+      return state;
   }
+}
 
-  export default weatherReducer
+export default weatherReducer;

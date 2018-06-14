@@ -1,36 +1,34 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from "react";
+import { connect } from "react-redux";
 
-
-const Translation = ({texts}) => {
-      return (
-
-        <section id='article'>
-
-          <p className='paragraph'>
-          <span className='sentence'>
-          <span className='te-reo'>kia ora!</span>
-          <span className='english'>hello!</span>
+const Translation = ({ texts }) => {
+  return (
+    <section id="article">
+      <p className="paragraph">
+        <span className="sentence">
+          <span className="te-reo">kia ora!</span>
+          <span className="english">hello!</span>
+        </span>
+        <span className="sentence">
+          <span className="te-reo">
+            Mā te whakaaro nui e hanga te whare; mā te mātauranga e whakaū
           </span>
-          <span className='sentence'>
-          <span className='te-reo'>Mā te whakaaro nui e hanga te whare; mā te mātauranga e whakaū</span>
-          <span className='english'>Big ideas create the house; knowledge maintains it.</span>
+          <span className="english">
+            Big ideas create the house; knowledge maintains it.
           </span>
-          </p>
-        </section>
+        </span>
+      </p>
+    </section>
+  );
+};
 
-    )
-}
-
-
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     texts: state.texts
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps)(Translation)
+export default connect(mapStateToProps)(Translation);
 
 /*
 

@@ -1,21 +1,20 @@
-export function flipNav (navVisible) {
+export function flipNav(navVisible) {
   return {
-    type: 'FLIP_NAV',
+    type: "FLIP_NAV",
     navVisible
-  }
+  };
 }
 
-export function openNav () {
+export function openNav() {
   return {
-  type: 'OPEN_NAV',
-  navOpen: true
-  }
+    type: "OPEN_NAV",
+    navOpen: true
+  };
 }
 
-export function closeNav () {
+export function closeNav() {
   return {
-    type: 'CLOSE_NAV',
+    type: "CLOSE_NAV",
     navOpen: false
-  }
+  };
 }
-

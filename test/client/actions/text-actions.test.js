@@ -1,62 +1,65 @@
-import {getTextByURL, receiveText, clearText, increaseIndex, decreaseIndex} from '../../../client/actions/text'
-import nock from 'nock'
+import {
+  getTextByURL,
+  receiveText,
+  clearText,
+  increaseIndex,
+  decreaseIndex
+} from "../../../client/actions/text";
+import nock from "nock";
 
-test('getText will dispatch an action on success', () => {
-  const fakeText = [
-    'hello'
-  ]
+test("getText will dispatch an action on success", () => {
+  const fakeText = ["hello"];
 
-  const scope = nock('http://localhost:80')
-    .get('/api/v1/text/hello')
+  const scope = nock("http://localhost:80")
+    .get("/api/v1/text/hello")
     .reply(200, fakeText);
 
   const expectedAction = {
-    type: 'RECEIVE_TEXT',
+    type: "RECEIVE_TEXT",
     text: fakeText
-  }
+  };
 
-  const dispatch = jest.fn()
-    .mockImplementationOnce(action => {
-      expect(action).toEqual(expectedAction)
-      scope.done()
-    })
+  const dispatch = jest.fn().mockImplementationOnce(action => {
+    expect(action).toEqual(expectedAction);
+    scope.done();
+  });
 
-      getTextByURL()(dispatch)
-})
+  getTextByURL()(dispatch);
+});
 
-test('clearText', () => {
+test("clearText", () => {
   const expected = {
-    type: 'CLEAR_TEXT',
+    type: "CLEAR_TEXT",
     text: {}
-  }
-  const actual = clearText()
+  };
+  const actual = clearText();
 
-  expect(actual).toEqual(expected)
-})
+  expect(actual).toEqual(expected);
+});
 
-test('receiveText', () => {
-  const text = 'a text'
+test("receiveText", () => {
+  const text = "a text";
   const expected = {
-    type: 'RECEIVE_TEXT',
+    type: "RECEIVE_TEXT",
     text
-  }
-  const actual = receiveText(text)
+  };
+  const actual = receiveText(text);
 
-  expect(actual).toEqual(expected)
-})
+  expect(actual).toEqual(expected);
+});
 
-test('increaseIndex', ()=> {
+test("increaseIndex", () => {
   const expected = {
-    type:'INCREASE_INDEX'
-  }
-  const actual = increaseIndex()
-  expect(actual).toEqual(expected)
-})
+    type: "INCREASE_INDEX"
+  };
+  const actual = increaseIndex();
+  expect(actual).toEqual(expected);
+});
 
-test('decreaseIndex', ()=> {
+test("decreaseIndex", () => {
   const expected = {
-    type:'DECREASE_INDEX'
-  }
-  const actual = decreaseIndex()
-  expect(actual).toEqual(expected)
-})
+    type: "DECREASE_INDEX"
+  };
+  const actual = decreaseIndex();
+  expect(actual).toEqual(expected);
+});

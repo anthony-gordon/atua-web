@@ -1,10 +1,10 @@
-function textsReducer (state=[], action) {
+function textsReducer(state = [], action) {
   switch (action.type) {
-    case 'RECEIVE_TEXTS':
-      return action.texts
+    case "RECEIVE_TEXTS":
+      return action.texts;
     default:
-      return state
+      return state;
   }
 }
 
-export default textsReducer
+export default textsReducer;
